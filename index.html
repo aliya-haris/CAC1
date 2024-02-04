@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Invoice Generator</title>
+</head>
+<body>
+<div class="invoice" id="input-invoice">
+
+        <h1>INVOICE</h1>
+    
+        <!-- Invoice Details Section -->
+        <label for="invoice-number">Invoice Number:</label>
+        <input type="text" id="invoice-number">
+    
+        <label for="invoice-date">Invoice Date:</label>
+        <input type="date" id="invoice-date">
+    
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date">
+    
+    <div class="bill-container">
+    <div class="billby">
+        <!-- Billed By Section -->
+        <h2>Billed By</h2>
+        <label for="billed-name">Name:</label>
+        <input type="text" id="billed-name">
+    
+        <label for="billed-address">Address:</label>
+        <textarea id="billed-address"></textarea>
+    
+        <label for="billed-city">City:</label>
+        <input type="text" id="billed-city">
+    
+        <label for="billed-state">State:</label>
+        <input type="text" id="billed-state">
+    
+        <label for="billed-country">Country:</label>
+        <input type="text" id="billed-country">
+    </div>
+
+    <div class="billedto">
+        <!-- Billed To Section -->
+        <h2>Billed To</h2>
+        <label for="client-name">Name:</label>
+        <input type="text" id="client-name">
+    
+        <label for="client-address">Address:</label>
+        <textarea id="client-address"></textarea>
+    
+        <label for="client-city">City:</label>
+        <input type="text" id="client-city">
+    
+        <label for="client-state">State:</label>
+        <input type="text" id="client-state">
+    
+        <label for="client-country">Country:</label>
+        <input type="text" id="client-country">
+    </div>
+    </div>
+
+        <!-- Items Section -->
+        <h2>Items</h2>
+        <button onclick="addItem()">Add Item</button>
+        <div id="items-container">
+          <!-- Item rows will be dynamically added here -->
+        </div>
+    
+        <!-- Other Charges Section -->
+        <label for="gst">GST (%):</label>
+        <input type="number" id="gst" value="0">
+    
+        <label for="tax">Tax (%):</label>
+        <input type="number" id="tax" value="0">
+    
+        <label for="discount">Discount (%):</label>
+        <input type="number" id="discount" value="0">
+    
+        <!-- Generate Invoice Button -->
+        <button onclick="generateInvoice()">Generate Invoice</button>
+    </div>
+</div>
+
+      <!-- Invoice Preview Section -->
+      <div id="invoice-preview" class="hidden">
+        <!-- Preview content will be dynamically added here -->
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
