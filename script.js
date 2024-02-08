@@ -29,7 +29,6 @@ function addItem() {
     var clientState = document.getElementById('client-state').value;
     var clientCountry = document.getElementById('client-country').value;
     
-        // Validate mandatory fields
     if (
         !invoiceNumber ||
         !invoiceDate ||
